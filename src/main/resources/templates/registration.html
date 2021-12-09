@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header"></header>
+<div class="container mt-5 md-5">
+    <h1>Регістрація</h1>
+    <form action="/registration" method="post">
+        <input type="text" name="username" placeholder="Введіть ім'я користувача" class="form-control">
+        <input type="text" name="email" placeholder="Введіть email" class="form-control">
+        <input type="password" name="password" placeholder="Введіть пароль" class="form-control">
+        <p>
+            <input type="radio" name="type" id="radio-student" value="Student"> Я студент
+        </p>
+        <p>
+            <input type="radio" name="type" id="radio-teacher" value="Teacher"> Я вчитель
+        </p>
+        <button type="submit" class="btn btn-success">Зареєструватися</button>
+    </form>
+</div>
+</body>
+</html>
